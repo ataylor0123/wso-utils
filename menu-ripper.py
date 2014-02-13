@@ -45,11 +45,9 @@ def menus(halls):   # Takes a dict of the form hall: [meals]
     all_menus = {}  # Returns a similar dict
     driver = webdriver.Firefox()   # Opens a Firefox window
     for hall in halls:
-        print(hall)
         all_menus[hall] = {}       # Will return this
         for meal in halls[hall]:   # Go through each of the hall's meals
             all_menus[hall][meal] = {}
-            print("Scanning {} {}".format(hall, meal))
             try:
                 # Wait for page to load the link we want
                 driver.get("http://dining.williams.edu")
